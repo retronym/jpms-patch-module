@@ -5,5 +5,6 @@ public class Test {
         new Protected();
         new example.a.internal.Public();
         String s = javax.xml.XMLConstants.NULL_NS_URI;
+        System.out.println("Test");
     }
 }

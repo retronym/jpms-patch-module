@@ -21,10 +21,7 @@ javac --add-modules=java.xml                               \
 
 # Run a class from target/classes
 #
-java  --add-modules=java.xml                                \
-      --add-reads example.a=java.xml                        \
-      --module-path target/classes:target/test-classes      \
-      --patch-module example.a=target/test-classes          \
+java  --module-path target/classes                           \
       --module example.a/example.a.MainRun
 
 
@@ -32,10 +29,10 @@ java  --add-modules=java.xml                                \
 
 # Run a class from target/test-classes
 #
-java  --add-modules=java.xml                                \
-      --add-reads example.a=java.xml                        \
-      --module-path target/classes:target/test-classes      \
-      --patch-module example.a=target/test-classes          \
+java  --add-modules=java.xml                                 \
+      --add-reads example.a=java.xml                         \
+      --module-path target/classes                           \
+      --patch-module example.a=target/test-classes/example.a \
       --module example.a/example.a.Test
 #
 # FAIL: Error: Could not find or load main class example.a.Test in module example.a

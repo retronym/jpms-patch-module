@@ -16,7 +16,6 @@ javac --add-modules=java.xml                               \
       --module-source-path='src/main/java:src/test/java'   \
       -d target/test-classes                               \
       --module-path=target/classes                         \
-      --patch-module example.a=target/classes              \
       $(find src/test/java/example.a -name '*.java')
 
 # Run a class from target/classes
